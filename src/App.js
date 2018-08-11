@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import queryString from 'query-string'
+import queryString from 'query-string';
 
 let defaultStyle = {
   color: '#fff',
