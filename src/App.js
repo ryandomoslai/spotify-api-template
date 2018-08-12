@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import queryString from 'query-string';
 
 let defaultStyle = {
   color: '#fff'
@@ -85,8 +84,7 @@ class App extends Component {
     }
   }
   componentDidMount() {
-    let parsed = queryString.parse(window.location.search);
-    let accessToken = parsed.access_token;
+    let accessToken = new URLSearchParams(window.location.search).get('access_token');
     if (!accessToken)
       return;
     fetch('https://api.spotify.com/v1/me', { 
