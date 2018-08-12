@@ -84,6 +84,7 @@ class App extends Component {
     }
   }
   componentDidMount() {
+    console.log("Test");
     let accessToken = new URLSearchParams(window.location.search).get('access_token');
     if (!accessToken)
       return;
